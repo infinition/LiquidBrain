@@ -8,7 +8,7 @@ liquidbrain.exe
 # Trained brain files — these can be large and are machine-specific.
 # Users should train their own brain locally.
 *.brain
-
+readme.main.md
 # Cargo lock is committed for reproducible builds (binary crate convention).
 # Remove the line below if you want to exclude it.
 # Cargo.lock
