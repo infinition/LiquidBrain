@@ -1,3 +1,6 @@
+<img width="953" height="383" alt="image" src="https://github.com/user-attachments/assets/db808f6c-47fa-4d5b-855c-468b3282cacf" />
+
+
 # LiquidBrain
 
 > *"What if language was not a matrix of frozen weights, but a living graph where connections fatigue, recover, and compete — like a brain?"*
