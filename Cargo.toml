@@ -1,0 +1,27 @@
+[package]
+name        = "liquidbrain"
+version     = "0.1.0"
+edition     = "2024"
+description = "A bio-inspired language modeling engine — synapses fatigue, neurons forget on purpose."
+authors     = ["infinition"]
+license     = "MIT"
+readme      = "README.md"
+repository  = "https://github.com/infinition/LiquidBrain"
+keywords    = ["nlp", "language-model", "markov", "neuroscience", "rust"]
+categories  = ["science", "text-processing"]
+
+[dependencies]
+rand     = "0.8"
+serde    = { version = "1.0", features = ["derive"] }
+bincode  = "1.3"
+walkdir  = "2.3"
+
+# serde_json removed — not used by the engine (bincode handles persistence).
+
+[[bin]]
+name = "liquidbrain"
+path = "src/main.rs"
+
+# Earlier genesis_v43_1 / genesis_v61 / genesis_v90 bins removed:
+# their source files no longer exist and caused `cargo build` to fail.
+# Version history is preserved in the git log.
