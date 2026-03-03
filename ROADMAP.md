@@ -1,4 +1,4 @@
-# LiquidBrain — Roadmap
+# LiquidBrain - Roadmap
 
 Plan de développement, backlog de features, et directions de recherche.
 
@@ -16,7 +16,7 @@ Plan de développement, backlog de features, et directions de recherche.
 
 ---
 
-## Phase 0 — Stabilisation (V115) ✅
+## Phase 0 - Stabilisation (V115) ✅
 
 *Objectif : nettoyer la base de code et la rendre publiable.*
 
@@ -38,7 +38,7 @@ Plan de développement, backlog de features, et directions de recherche.
 
 ---
 
-## Phase 1 — Tests & Benchmarks 📋
+## Phase 1 - Tests & Benchmarks 📋
 
 *Objectif : valider le comportement du moteur sur des corpus réels et mesurer les performances.*
 
@@ -67,19 +67,19 @@ Plan de développement, backlog de features, et directions de recherche.
 
 ---
 
-## Phase 2 — Améliorations du Cœur 📋
+## Phase 2 - Améliorations du Cœur 📋
 
 *Objectif : améliorer la qualité de génération sans sacrifier la lisibilité du code.*
 
 ### 2.1 Génération
 
-- 📋 **Beam search** — explorer k chemins en parallèle et retenir le meilleur
+- 📋 **Beam search** - explorer k chemins en parallèle et retenir le meilleur
   *Complexité estimée : ~150 lignes*
-- 📋 **Nucleus sampling (top-p)** — filtrer les candidats dont la probabilité cumulée dépasse p
+- 📋 **Nucleus sampling (top-p)** - filtrer les candidats dont la probabilité cumulée dépasse p
   *Alternative plus simple à beam search pour la diversité*
-- 📋 **Repetition ngram penalty** — pénaliser les tokens déjà générés dans la fenêtre courante
+- 📋 **Repetition ngram penalty** - pénaliser les tokens déjà générés dans la fenêtre courante
   *Complémentaire à la fatigue synaptique pour les séquences longues*
-- 📋 **Génération multi-thread** — paralléliser les k meilleures continuations
+- 📋 **Génération multi-thread** - paralléliser les k meilleures continuations
   *Nécessite de rendre LiquidBrain `Send` ou d'utiliser des clones*
 
 ### 2.2 Focus Point
@@ -91,7 +91,7 @@ Plan de développement, backlog de features, et directions de recherche.
 ### 2.3 Apprentissage
 
 - 📋 **Decay temporel** : réduire légèrement le poids de toutes les synapses à chaque session
-  *Simule l'oubli naturel — empêche les anciennes associations de dominer indéfiniment*
+  *Simule l'oubli naturel - empêche les anciennes associations de dominer indéfiniment*
 - 📋 **Learning rate scheduling** : réduire `FACT_LEARNING_RATE` après N répétitions du même fait
   *Évite la sur-fixation sur les faits répétés*
 - 💡 **Negative learning** : commande `/forget <fait>` pour affaiblir explicitement une association
@@ -104,11 +104,11 @@ Plan de développement, backlog de features, et directions de recherche.
 - 📋 **Stop-words configurables** : exclure les mots trop fréquents du focus point
   *Actuellement géré partiellement par le filtre `len < 2`*
 - 💡 **BPE (Byte-Pair Encoding)** : tokenisation sous-mot pour une meilleure couverture
-  *Grosse refonte — Phase 4 territory*
+  *Grosse refonte - Phase 4 territory*
 
 ---
 
-## Phase 3 — Nouvelles Fonctionnalités 📋
+## Phase 3 - Nouvelles Fonctionnalités 📋
 
 *Objectif : rendre LiquidBrain utilisable comme outil autonome.*
 
@@ -149,7 +149,7 @@ Plan de développement, backlog de features, et directions de recherche.
 
 ---
 
-## Phase 4 — Recherche 🔬
+## Phase 4 - Recherche 🔬
 
 *Objectif : publier les résultats et explorer les directions théoriques.*
 

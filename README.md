@@ -3,14 +3,14 @@
 
 # LiquidBrain
 
-> *"What if language was not a matrix of frozen weights, but a living graph where connections fatigue, recover, and compete — like a brain?"*
+> *"What if language was not a matrix of frozen weights, but a living graph where connections fatigue, recover, and compete - like a brain?"*
 
 [![Rust](https://img.shields.io/badge/Rust-1.85%2B-orange?logo=rust)](https://www.rust-lang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/Genesis-V115-brightgreen)]()
 [![Status](https://img.shields.io/badge/status-experimental-yellow)]()
 
-**LiquidBrain** is an experimental language modeling engine written entirely in Rust.  Rather than encoding language as static weight matrices (as in Transformers or classical n-gram models), it builds a **dynamic semantic graph** whose connections actively fatigue and recover during generation — drawing inspiration from biological synaptic plasticity.
+**LiquidBrain** is an experimental language modeling engine written entirely in Rust.  Rather than encoding language as static weight matrices (as in Transformers or classical n-gram models), it builds a **dynamic semantic graph** whose connections actively fatigue and recover during generation - drawing inspiration from biological synaptic plasticity.
 
 ---
 
@@ -24,7 +24,7 @@ The result is a system that:
 - **Anchors generation** at semantically rich tokens using an attention-like focus mechanism.
 - **Runs entirely in RAM**, with a compact binary persistence format.
 
-This is a research prototype — not a production language model.  Its goal is to explore whether **biologically-inspired dynamics** can compensate for the statistical limitations of small, incrementally-trained models.
+This is a research prototype - not a production language model.  Its goal is to explore whether **biologically-inspired dynamics** can compensate for the statistical limitations of small, incrementally-trained models.
 
 ---
 
@@ -36,7 +36,7 @@ This is a research prototype — not a production language model.  Its goal is t
 | **Passive Recovery** | Health regenerates over time, allowing previously silenced paths to become viable again. |
 | **Focus Point** | Generation starts at the most semantically salient token of the prompt (attention × rarity score). |
 | **Lateral Inhibition** | When a high-confidence fact is learned, competing connections are weakened (winner-take-all). |
-| **Online Learning** | Every user input updates the graph in real time — no offline training phase. |
+| **Online Learning** | Every user input updates the graph in real time - no offline training phase. |
 | **Markdown Parser** | Structural Markdown elements (tables, code blocks, lists) are translated into semantic punctuation rather than stripped. |
 | **Auto-Pruning** | Weak synapses are periodically removed to maintain a compact memory footprint. |
 | **Binary Persistence** | The full graph is serialised with `bincode` for fast, compact save/load. |
@@ -97,7 +97,7 @@ User prompt
 ## Installation
 
 ### Prerequisites
-- Rust 1.85+ (2024 edition) — install via [rustup.rs](https://rustup.rs)
+- Rust 1.85+ (2024 edition) - install via [rustup.rs](https://rustup.rs)
 
 ### Clone and build
 
@@ -160,9 +160,9 @@ GENESIS > langage système rapide et sûr , Rust garantit la sécurité mémoire
 
 ### Learning behaviour
 
-- **Declarative statements** (e.g., `"The sky is blue."`) are learned at `FACT_LEARNING_RATE = 50.0` — strong reinforcement.
-- **Questions** (ending with `?`) are learned at `QUESTION_LEARNING_RATE = 0.0` — the model does not memorise interrogative phrasing.
-- **Corpus files** (`/train`) are ingested at `CORPUS_LEARNING_RATE = 3.0` — moderate reinforcement, many competing phrasings.
+- **Declarative statements** (e.g., `"The sky is blue."`) are learned at `FACT_LEARNING_RATE = 50.0` - strong reinforcement.
+- **Questions** (ending with `?`) are learned at `QUESTION_LEARNING_RATE = 0.0` - the model does not memorise interrogative phrasing.
+- **Corpus files** (`/train`) are ingested at `CORPUS_LEARNING_RATE = 3.0` - moderate reinforcement, many competing phrasings.
 
 ---
 
@@ -183,7 +183,7 @@ health += SYNAPSE_RECOVERY      # recovery
 health = min(health, MAX_HEALTH)
 ```
 
-When health reaches 0, the synapse is **silent** — even a heavily reinforced association becomes unavailable, forcing the model to explore the next-best path.  After a few steps without firing, health recovers and the path becomes available again.
+When health reaches 0, the synapse is **silent** - even a heavily reinforced association becomes unavailable, forcing the model to explore the next-best path.  After a few steps without firing, health recovers and the path becomes available again.
 
 ### 2. Focus Point (Attention Approximation)
 
@@ -221,13 +221,13 @@ Every sequence is learned simultaneously at context sizes 1, 2, and 3:
   [the,cat,sat]→ END    (trigram context)
 ```
 
-During generation, the model tries the longest matching context first and falls back to shorter ones — guaranteeing coverage even for unseen trigrams.
+During generation, the model tries the longest matching context first and falls back to shorter ones - guaranteeing coverage even for unseen trigrams.
 
 ---
 
 ## Configuration
 
-All hyperparameters live in `src/config.rs`.  No recompilation tricks needed — just edit the file and `cargo run --release`.
+All hyperparameters live in `src/config.rs`.  No recompilation tricks needed - just edit the file and `cargo run --release`.
 
 | Constant | Default | Description |
 |---|---|---|
@@ -283,10 +283,10 @@ See [ROADMAP.md](ROADMAP.md) for the full development plan, including upcoming f
 
 ## Limitations
 
-- **No grammar** — generation is purely statistical; it does not model syntax.
-- **Vocabulary-bound** — the model cannot handle words it has never seen.
-- **No long-range coherence** — context window is max 3 tokens; long-distance dependencies are not captured.
-- **Language-neutral** — works on any tokenisable language but has no built-in morphological awareness.
+- **No grammar** - generation is purely statistical; it does not model syntax.
+- **Vocabulary-bound** - the model cannot handle words it has never seen.
+- **No long-range coherence** - context window is max 3 tokens; long-distance dependencies are not captured.
+- **Language-neutral** - works on any tokenisable language but has no built-in morphological awareness.
 
 These are known constraints of the n-gram foundation.  See ROADMAP.md for planned mitigations.
 
@@ -307,16 +307,16 @@ Please keep PRs focused (one feature / fix per PR) and run `cargo test` before s
 
 ## License
 
-MIT — see [LICENSE](LICENSE) for details.
+MIT - see [LICENSE](LICENSE) for details.
 
 ---
 
 ## References & Inspiration
 
-- Hebb, D.O. (1949) — *The Organisation of Behaviour* — synaptic plasticity rule.
-- Elman, J.L. (1990) — *Finding Structure in Time* — simple recurrent networks.
-- Jurafsky, D. & Martin, J.H. (2023) — *Speech and Language Processing*, Ch. 3 — n-gram language models and backoff smoothing.
-- Wilson, M.A. & McNaughton, B.L. (1994) — *Reactivation of hippocampal ensemble memories during sleep* — pruning / consolidation during rest.
+- Hebb, D.O. (1949) - *The Organisation of Behaviour* - synaptic plasticity rule.
+- Elman, J.L. (1990) - *Finding Structure in Time* - simple recurrent networks.
+- Jurafsky, D. & Martin, J.H. (2023) - *Speech and Language Processing*, Ch. 3 - n-gram language models and backoff smoothing.
+- Wilson, M.A. & McNaughton, B.L. (1994) - *Reactivation of hippocampal ensemble memories during sleep* - pruning / consolidation during rest.
 
 ---
 
