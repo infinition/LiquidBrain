@@ -1,0 +1,4 @@
+Contact: https://github.com/infinition/LiquidBrain/issues
+Expires: 2027-03-04T08:29:37.000Z
+Preferred-Languages: en, fr
+Policy: https://github.com/infinition/LiquidBrain/blob/wiki/SECURITY.md
