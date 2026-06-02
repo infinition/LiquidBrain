@@ -321,3 +321,15 @@ MIT - see [LICENSE](LICENSE) for details.
 ---
 
 *LiquidBrain: exploring language at the intersection of graph theory, thermodynamics, and cellular biology.*
+
+---
+
+## Star History
+
+<a href="https://www.star-history.com/?repos=infinition%2FLiquidBrain&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=infinition/LiquidBrain&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=infinition/LiquidBrain&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=infinition/LiquidBrain&type=date&legend=top-left" />
+ </picture>
+</a>
