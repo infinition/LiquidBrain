@@ -1,4 +1,6 @@
-<img width="320" height="320" alt="image-removebg-preview (3)" src="https://github.com/user-attachments/assets/f320a691-ff53-4434-8ec8-0ba4fee4dba7" />
+<p align="center">
+  <img src=".github/LiquidBrain.png" alt="LiquidBrain icon" width="320" height="320" />
+</p>
 
 <img width="953" height="383" alt="image" src="https://github.com/user-attachments/assets/db808f6c-47fa-4d5b-855c-468b3282cacf" />
 
